@@ -3,6 +3,7 @@ package netlink
 import (
 	"errors"
 	"fmt"
+
 	"github.com/vishvananda/netlink/nl"
 )
 
@@ -64,6 +65,7 @@ type U32 struct {
 	FilterAttrs
 	ClassId    uint32
 	RedirIndex int
+	Match      *nl.TcU32Sel
 	Actions    []Action
 }
 
